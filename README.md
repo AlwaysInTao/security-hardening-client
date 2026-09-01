@@ -27,3 +27,7 @@ This application requires product activation to unlock the security engine panel
 
 * **License Type:** Free Tier & Premium Licensing Available.
 * **How to Obtain a Key:** Please email **btaylor00744@gmail.com** with **"License Key Request"** in the subject line to receive your registration key.
+
+## platform System Requirements
+* **Operating System:** Linux (Ubuntu, Debian, Mint, or similar distributions)
+* **Note for Windows Users:** The interface will launch on Windows, but the auditing engine requires a native Linux environment to execute security baselines.
