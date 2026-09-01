@@ -23,7 +23,7 @@ This client is structured as a standalone Python package. You can install it nat
 
 ## 🔑 Product Registration & License Keys
 
-This application requires product activation to unlock the security engine panel. 
+This application requires product activation to unlock the security engine panel.
 
 * **License Type:** Free Tier & Premium Licensing Available.
-* **How to Obtain a Key:** License activation keys are currently distributed on request. Please contact the administrator by email to receive your registration key.
+* **How to Obtain a Key:** Please email **btaylor00744@gmail.com** with **"License Key Request"** in the subject line to receive your registration key.
