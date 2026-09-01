@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SEC-001",
+    "title": "Windows Defender Real-Time Protection",
+    "platform": "Windows",
+    "severity": "Critical",
+    "description": "Checks if local malware scanning and real-time behavioral protection engines are actively running.",
+    "audit_cmd": "powershell -Command \"(Get-MpPreference).DisableRealtimeMonitoring\"",
+    "expected": "False",
+    "fix_cmd": "powershell -Command \"Start-Process powershell -ArgumentList 'Set-MpPreference -DisableRealtimeMonitoring $false' -Verb RunAs\""
+  },
+  {
+    "id": "SEC-002",
+    "title": "Legacy SMBv1 File Sharing Shares",
+    "platform": "Windows",
+    "severity": "Warning",
+    "description": "Verifies if the outdated, highly vulnerable SMBv1 protocol is enabled in the network stack.",
+    "audit_cmd": "powershell -Command \"(Get-SmbServerConfiguration).EnableSMB1Protocol\"",
+    "expected": "False",
+    "fix_cmd": "powershell -Command \"Start-Process powershell -ArgumentList 'Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force' -Verb RunAs\""
+  },
+  {
+    "id": "SEC-003",
+    "title": "SSH Root Password Authentication",
+    "platform": "Linux",
+    "severity": "Critical",
+    "description": "Verifies if direct, non-key root login authentication is completely disabled in the SSH daemon configurations.",
+    "audit_cmd": "grep '^PermitRootLogin' /etc/ssh/sshd_config",
+    "expected": "PermitRootLogin no",
+    "fix_cmd": "sudo sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config && sudo systemctl restart sshd"
+  }
+]
