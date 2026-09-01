@@ -31,3 +31,7 @@ This application requires product activation to unlock the security engine panel
 ## platform System Requirements
 * **Operating System:** Linux (Ubuntu, Debian, Mint, or similar distributions)
 * **Note for Windows Users:** The interface will launch on Windows, but the auditing engine requires a native Linux environment to execute security baselines.
+
+## 💻 System Compatibility
+* **Supported OS:** Linux (Ubuntu, Debian, and derivatives)
+* **Windows Support:** Windows functionality has not been added yet—check back soon! The graphical interface will launch on Windows, but system hardening features are currently exclusive to Linux environments.
